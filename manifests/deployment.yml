@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: deplonpythonflaskdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deplonpythonflaskdocker 
+    spec:
+      containers:
+        - name: deplonpythonflaskdocker 
+          image: acrcookbook.azurecr.io/deplonpythonflaskdocker
+          ports:
+          - containerPort: 8080
